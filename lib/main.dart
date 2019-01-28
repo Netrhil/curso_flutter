@@ -20,8 +20,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Primera app en Flutter "),
+        ) ,
+        body: Center(
+          child: Text("Wiiii"),
+        ),)
+      );
   }
 }
 
