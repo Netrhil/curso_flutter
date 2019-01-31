@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'description_place.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -22,40 +22,10 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Primer Reto!'),
-          leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
-        onPressed: () { Scaffold.of(context).openDrawer(); }
-      ),
+          title: Text("Holaaa"),
         ),
-        body: Stack(
-          children: <Widget>[
-            Container (
-              decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: new AssetImage("assets/Digital-Fractal-Art.jpg"), 
-                  fit: BoxFit.cover,),
-              ),
-            ),
-
-           Center(
-              child: Container(
-                color: const Color(0x73000000) ,
-                height: 100
-              ),
-            ),
-
-            Center(
-              child: Text(
-                'Fractales para Todos!!!!',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26, color: Color(0xFF87DBE3)),
-              )
-            )
-          ],
-        )
-        )
+        body: new DescriptionPlace(),
+      )
       );
   }
 }
