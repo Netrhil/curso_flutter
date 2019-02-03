@@ -1,8 +1,39 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
+
+  final String namePlace;
+  final int stars;
+  final String descriptionPlace;
+
+  // constructor en dart
+  DescriptionPlace(this.descriptionPlace, this.stars, this.namePlace);
+
+  
   @override
   Widget build(BuildContext context) {
+
+    final starHalf = Container(
+      margin: EdgeInsets.only(
+        top: 320.0,
+        right: 3.0
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C661),
+      ),
+    );
+
+    final starBorder = Container(
+      margin: EdgeInsets.only(
+        top: 320.0,
+        right: 3.0
+      ),
+      child: Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C661),
+      ),
+    );
     
     final star = Container(
       margin: EdgeInsets.only(
@@ -25,8 +56,9 @@ class DescriptionPlace extends StatelessWidget {
           ),
 
           child: Text(
-            "Soy un titulo",
+            namePlace,
             style: TextStyle(
+              fontFamily: "Lato",
               fontSize: 30.0,
               fontWeight: FontWeight.w900
             ),
@@ -38,8 +70,8 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star,
-            star
+            starHalf,
+            starBorder
           ],
         )
 
@@ -57,9 +89,11 @@ class DescriptionPlace extends StatelessWidget {
             bottom: 20.0
           ),
           child: Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut purus ex. Nullam lobortis dui eu tellus iaculis feugiat non et nisl. Praesent pretium consequat diam, ut dapibus magna molestie nec. Praesent turpis quam, finibus eget eros sit amet, vestibulum interdum felis. In suscipit metus id ligula interdum luctus. Curabitur non tellus semper, consectetur risus accumsan, posuere urna. Ut ut fringilla nisl.",
+            descriptionPlace,
             style: TextStyle(
-              fontSize: 15.0,
+              fontFamily: "Lato",
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold
             ),
           ),
 

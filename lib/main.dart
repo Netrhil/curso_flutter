@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -24,9 +26,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Holaaa"),
         ),
-        body: new DescriptionPlace(),
+        body: Column(
+          children: <Widget>[
+            new DescriptionPlace("Texto mucho texto Texto mucho texto Texto mucho texto, Texto mucho textoTexto mucho textoTexto mucho texto,Texto mucho textoTexto mucho texto", 4, "Un titulo"),
+            new Review("assets/img/le-llama.jpg", "La Chama", "1 review 5 photos", "Un hermoso dia en chamalandia"),
+          ],
+        )
+        
       )
-      );
+    );
   }
 }
 
