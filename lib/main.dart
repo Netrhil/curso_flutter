@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,13 +26,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.cyan,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Holaaa"),
-        ),
-        body: Column(
+       
+        body: Stack(
           children: <Widget>[
-            new DescriptionPlace("Texto mucho texto Texto mucho texto Texto mucho texto, Texto mucho textoTexto mucho textoTexto mucho texto,Texto mucho textoTexto mucho texto", 4, "Un titulo"),
-            new Review("assets/img/le-llama.jpg", "La Chama", "1 review 5 photos", "Un hermoso dia en chamalandia"),
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto ", 4, "Chamalandia"),
+                ReviewList()
+              ],
+            ),
+            HeaderAppBar()
           ],
         )
         
