@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
-import 'header_appbar.dart';
+import 'navigation_trips.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,21 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.cyan,
       ),
-      home: Scaffold(
-       
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace("Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto Texto texto mucho texto ", 4, "Chamalandia"),
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        )
-        
-      )
+      home: NavigationTrips()
     );
   }
 }
