@@ -10,23 +10,11 @@ class NavigationTrips extends StatefulWidget {
 
 class _NavigationTripsState extends State<NavigationTrips> {
 
-  int indexWidget = 0;
-
-  final List<Widget> widgetsChildren = [
-    HomeTrips(),
-    SearchTrips(),
-    ProfileTrips()
-  ];
-
-  void onTapTapped(int index) {
-    setState(() {indexWidget = index;});
-  }
-
   @override
   Widget build(BuildContext context) {
     
     return Scaffold(
-      body: widgetsChildren[indexWidget],
+      body: HomeTrips(),
 
       bottomNavigationBar: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
